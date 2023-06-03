@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app js</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Raleway:wght@200;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+    <div class="container">
+    
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter your location" class="input-box">
+                <button class="fa-solid fa-magnifying-glass-location" id="searchBtn"></button>
+            </div>
+
+        </div>
+<div class="location-not-found">
+    <h1>Sorry, location not found</h1>
+    <img src="/pics/404.png" alt="404 Error">
+</div>
+
+        <div class="weather-body">
+            <img src="/pics/cloud.png" alt="weather-img" class="weather-img">
+            <div class="weather-box">
+                <p class="temperature">0 <sup>°C</sup></p>
+                <p class="description">Light Rain</p>
+            </div>
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="text">
+                    <span id="Humidity">45%</span>
+                    <p>Humidity</p>
+                </div>
+                <div class="wind-speed">
+                    <i class="fa-solid fa-wind"></i>
+                </div>
+                <div class="text">
+                    <span id="wind-speed">12Km/H</span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
