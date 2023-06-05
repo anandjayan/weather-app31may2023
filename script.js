@@ -1,7 +1,7 @@
 const inputBox = document.querySelector('.input-box');
-const searchBtn = document.getElementById('.searchBtn');
-const Humidity = document.getElementById('.Humidity');
-const wind_speed = document.getElementById('.wind-speed');
+const searchBtn = document.getElementById('searchBtn');
+const Humidity = document.getElementById('Humidity');
+const wind_speed = document.getElementById('wind-speed');
 const weather_img = document.querySelector('.weather-img');
 const temperature = document.querySelector('.temperature');
 const description = document.querySelector('.description');
@@ -19,13 +19,14 @@ async function checkWeather(city){
         weather_body.style.display = "none";
         console.log("error");
         return;
+        
     }
     location_not_found.style.display = "none";
 
     weather_body.style.display = "flex";
 
 
-    temperature.innerHTML = `${math.round(weather_data.main.temp - 273.15)}°C`;
+    temperature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
     
     Humidity.innerHTML = `${weather_data.main.humidity}%`;
     wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`;
@@ -48,7 +49,7 @@ async function checkWeather(city){
             weather_img.src = "/pics/snow.png";
             break;
     }
-}
+};
 
 searchBtn.addEventListener('click' , ()=>{
     checkWeather(inputBox.value);
